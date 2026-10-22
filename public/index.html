@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acesso ao sistema Biblioteca Aurora">
+  <title>Entrar | Almoxarifado</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/login.js" defer></script>
+</head>
+<body class="pagina-login">
+  <main class="login-layout">
+    <section class="login-apresentacao" aria-label="Apresentação Estoque">
+      <div class="marca marca-clara">
+        <span class="marca-icone" aria-hidden="true">A</span>
+        <span>Almoxarifado Senai</span>
+      </div>
+
+      <div class="login-chamada">
+        <span class="sobretitulo">GESTÃO DO ESTOQUE</span>
+        <h1>Sistema de Organização e controle de Estoque.</h1>
+        <p>Controle o almoxarifado, acompanhe o estoque e registre cada movimentação em um só lugar.</p>
+      </div>
+
+
+    </section>
+
+    <section class="login-acesso">
+      <div class="caixa-login">
+        <div class="marca marca-mobile">
+          <span class="marca-icone" aria-hidden="true">A</span>
+          <span>Almoxarifado Senai</span>
+        </div>
+
+        <span class="sobretitulo">BEM-VINDO DE VOLTA</span>
+        <h2>Acesse sua conta</h2>
+        <p class="subtitulo">Use o e-mail e a senha cadastrados no sistema.</p>
+
+        <form id="form-login" novalidate>
+          <div class="grupo-campo">
+            <label for="email">E-mail</label>
+            <div class="campo-com-icone">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
+              <input type="email" id="email" name="email" autocomplete="username" placeholder="nome@exemplo.com" required>
+            </div>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="senha">Senha</label>
+            <div class="campo-com-icone">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>
+              <input type="password" id="senha" name="senha" autocomplete="current-password" placeholder="Digite sua senha" required>
+            </div>
+          </div>
+
+          <button type="submit" class="botao botao-login">
+            <span class="texto-botao">Entrar</span>
+            <span class="seta-botao" aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <p id="mensagem" class="mensagem" aria-live="polite"></p>
+
+        <p class="ajuda-login">Problemas para acessar? Confirme se o servidor está ativo e se o usuário já foi cadastrado.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

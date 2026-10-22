@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | Almoxarifado Senai</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/auth.js" defer></script>
+  <script src="js/produtos.js" defer></script>
+</head>
+<body>
+  <header class="cabecalho">
+    <a class="marca" href="painel.html" aria-label="Almoxarifado Senai - início">
+      <span class="marca-icone" aria-hidden="true">A</span>
+      <span>Almoxarifado Senai</span>
+    </a>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="painel.html">Painel</a>
+      <a href="produtos.html" class="ativo" aria-current="page">Produtos</a>
+      <a href="movimentacoes.html">Movimentações</a>
+      <a href="index.html" id="link-sair" class="link-sair">Sair</a>
+    </nav>
+  </header>
+
+  <main class="conteudo-principal">
+    <header class="cabecalho-pagina">
+      <div>
+        <span class="sobretitulo">ESTOQUE</span>
+        <h1>Produtos</h1>
+        <p>Cadastre e gerencie os itens do almoxarifado.</p>
+      </div>
+      <span class="marcador-pagina" aria-hidden="true">01</span>
+    </header>
+
+    <section class="cartao" aria-labelledby="titulo-cadastro">
+      <div class="titulo-secao">
+        <span class="mini-icone" aria-hidden="true">+</span>
+        <div><h2 id="titulo-cadastro">Cadastrar novo produto</h2><p>Preencha os dados básicos do item.</p></div>
+      </div>
+      <form id="form-produtos" class="formulario-grid">
+        <div class="grupo-campo campo-largo">
+          <label for="nome">Nome do produto</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex.: Cimento CP II 50 kg" required>
+        </div>
+
+        <div class="grupo-campo campo-quantidade">
+          <label for="quantidade_estoque">Estoque inicial</label>
+          <input type="number" id="quantidade_estoque" name="quantidade_estoque" min="0" value="0" required>
+        </div>
+
+        <div class="acoes-formulario"><button type="submit" class="botao">Cadastrar produto <span aria-hidden="true">→</span></button></div>
+      </form>
+      <p id="mensagem" class="mensagem" aria-live="polite"></p>
+    </section>
+
+    <section class="cartao" aria-labelledby="titulo-lista">
+      <div class="titulo-secao titulo-secao-lista">
+        <div><h2 id="titulo-lista">Produtos cadastrados</h2><p>Consulte e gerencie o estoque do almoxarifado.</p></div>
+      </div>
+      <div class="linha-busca">
+        <input type="search" id="busca-nome" aria-label="Buscar pelo nome" placeholder="Buscar pelo nome...">
+        <button type="button" id="botao-buscar" class="botao botao-secundario">Buscar</button>
+      </div>
+
+      <div class="tabela-rolagem">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Estoque</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="lista-produtos">
+            <tr>
+              <td colspan="4" class="estado-tabela">Carregando produtos...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="paginacao" aria-label="Paginação">
+        <button type="button" id="botao-anterior" class="botao botao-pequeno">Anterior</button>
+        <span>Página <strong id="numero-pagina">1</strong></span>
+        <button type="button" id="botao-proxima" class="botao botao-pequeno">Próxima</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape"><span>Almoxarifado Senai</span><span>Gestão simples para estoques bem cuidados.</span></footer>
+</body>
+</html>

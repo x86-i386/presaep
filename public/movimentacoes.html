@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movimentações | Almoxarifado Senai</title>
+  <link rel="stylesheet" href="css/estilo.css?v=3">
+  <script src="js/auth.js?v=3" defer></script>
+  <script src="js/movimentacoes.js?v=3" defer></script>
+</head>
+<body>
+  <header class="cabecalho">
+    <a class="marca" href="painel.html" aria-label="Almoxarifado Senai - início">
+      <span class="marca-icone" aria-hidden="true">A</span>
+      <span>Almoxarifado Senai</span>
+    </a>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="painel.html">Painel</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="movimentacoes.html" class="ativo" aria-current="page">Movimentações</a>
+      <a href="index.html" id="link-sair" class="link-sair">Sair</a>
+    </nav>
+  </header>
+
+  <main class="conteudo-principal">
+    <header class="cabecalho-pagina">
+      <div>
+        <span class="sobretitulo">ESTOQUE</span>
+        <h1>Movimentações</h1>
+        <p>Registre entradas e saídas e acompanhe o histórico do almoxarifado.</p>
+      </div>
+      <span class="marcador-pagina" aria-hidden="true">02</span>
+    </header>
+
+    <section class="cartao" aria-labelledby="titulo-movimentacao">
+      <div class="titulo-secao">
+        <span class="mini-icone" aria-hidden="true">↕</span>
+        <div><h2 id="titulo-movimentacao">Registrar movimentação</h2><p>Informe o produto, o tipo e a quantidade.</p></div>
+      </div>
+      <form id="form-movimentacao" class="formulario-grid formulario-movimentacao">
+        <div class="grupo-campo campo-largo">
+          <label for="produtos_id">Produto</label>
+          <select id="produtos_id" name="produtos_id" required>
+            <option value="">Carregando produtos...</option>
+          </select>
+        </div>
+
+        <div class="grupo-campo">
+          <label for="tipo">Tipo</label>
+          <select id="tipo" name="tipo" required>
+            <option value="entrada">Entrada</option>
+            <option value="saida">Saída</option>
+          </select>
+        </div>
+
+        <div class="grupo-campo campo-quantidade">
+          <label for="quantidade">Quantidade</label>
+          <input type="number" id="quantidade" name="quantidade" min="1" value="1" required>
+        </div>
+
+        <div class="acoes-formulario"><button type="submit" class="botao">Registrar movimentação <span aria-hidden="true">→</span></button></div>
+      </form>
+      <p id="mensagem" class="mensagem" aria-live="polite"></p>
+    </section>
+
+    <section class="cartao" aria-labelledby="titulo-historico">
+      <div class="titulo-secao titulo-secao-lista">
+        <div><h2 id="titulo-historico">Histórico recente</h2><p>Últimas entradas e saídas registradas.</p></div>
+      </div>
+      <p id="mensagem-historico" class="mensagem" aria-live="polite"></p>
+      <div class="tabela-rolagem">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">Produto</th>
+              <th scope="col">Tipo</th>
+              <th scope="col">Quantidade</th>
+            </tr>
+          </thead>
+          <tbody id="lista-movimentacoes">
+            <tr>
+              <td colspan="4" class="estado-tabela">Carregando movimentações...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape"><span>Almoxarifado Senai</span><span>Gestão simples para estoques bem cuidados.</span></footer>
+</body>
+</html>

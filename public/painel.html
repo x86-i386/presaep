@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel | Almoxarifado Senai</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/auth.js" defer></script>
+</head>
+<body>
+  <header class="cabecalho">
+    <a class="marca" href="painel.html" aria-label="Almoxarifado Senai - início">
+      <span class="marca-icone" aria-hidden="true">A</span>
+      <span>Almoxarifado Senai</span>
+    </a>
+    <nav class="menu" aria-label="Navegação principal">
+      <a href="painel.html" class="ativo" aria-current="page">Painel</a>
+      <a href="produtos.html">Produtos</a>
+      <a href="movimentacoes.html">Movimentações</a>
+      <a href="index.html" id="link-sair" class="link-sair">Sair</a>
+    </nav>
+  </header>
+
+  <main class="conteudo-principal">
+    <section class="boas-vindas">
+      <div>
+        <span class="sobretitulo">VISÃO GERAL</span>
+        <h1>Bem-vindo sistema Almoxarifado Senai</h1>
+        <p>Escolha uma área para começar a gestão.</p>
+      </div>
+      <div class="usuario-logado">
+        <span class="avatar-usuario" id="avatar-usuario" aria-hidden="true">U</span>
+        <span>
+          <strong id="identificacao-usuario">Usuário autenticado</strong>
+          <small id="perfil-usuario">Perfil</small>
+        </span>
+      </div>
+    </section>
+
+    <div class="grade">
+      <a href="produtos.html" class="cartao card-atalho">
+        <span class="icone-card icone-produtos" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 4h11a3 3 0 013 3v13H7a2 2 0 01-2-2V4z"/><path d="M7 17h12M9 8h6M9 11h6"/></svg>
+        </span>
+        <span class="conteudo-card">
+          <span class="numero-card">01</span>
+          <h2>Produtos</h2>
+          <p>Cadastre produtos e consulte o estoque disponível.</p>
+          <strong>Acessar estoque <span aria-hidden="true">→</span></strong>
+        </span>
+      </a>
+
+      <a href="movimentacoes.html" class="cartao card-atalho">
+        <span class="icone-card icone-movimentacoes" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 7h13l-3-3M20 17H7l3 3M17 4l3 3-3 3M7 20l-3-3 3-3"/></svg>
+        </span>
+        <span class="conteudo-card">
+          <span class="numero-card">02</span>
+          <h2>Movimentações</h2>
+          <p>Registre entradas e saídas com segurança e mantenha o estoque atualizado.</p>
+          <strong>Gerenciar estoque <span aria-hidden="true">→</span></strong>
+        </span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="rodape"><span>Almoxarifado Senai</span><span>Gestão simples para estoques bem cuidados.</span></footer>
+</body>
+</html>
